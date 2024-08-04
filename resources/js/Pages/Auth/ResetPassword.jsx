@@ -1,4 +1,4 @@
-import GuestLayout from '@/Layouts/GuestLayout';
+import SessionLayout from '@/Layouts/SessionLayout';
 import InputError from '@/Components/InputError';
 import InputLabel from '@/Components/InputLabel';
 import PrimaryButton from '@/Components/PrimaryButton';
@@ -22,7 +22,7 @@ export default function ResetPassword({ token, email }) {
     };
 
     return (
-        <GuestLayout>
+        <SessionLayout>
             <Head title="Reset Password" />
 
             <form onSubmit={submit}>
@@ -60,7 +60,7 @@ export default function ResetPassword({ token, email }) {
                 </div>
 
                 <div className="mt-4">
-                    <InputLabel htmlFor="password_confirmation" value="Confirm Password" />
+                    <InputLabel htmlFor="password_confirmation" value="Confirmar Password" />
 
                     <TextInput
                         type="password"
@@ -77,10 +77,10 @@ export default function ResetPassword({ token, email }) {
 
                 <div className="flex items-center justify-end mt-4">
                     <PrimaryButton className="ms-4" disabled={processing}>
-                        Reset Password
+                        Resetear Password
                     </PrimaryButton>
                 </div>
             </form>
-        </GuestLayout>
+        </SessionLayout>
     );
 }

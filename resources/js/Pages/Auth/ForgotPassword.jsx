@@ -1,4 +1,4 @@
-import GuestLayout from '@/Layouts/GuestLayout';
+import SessionLayout from '@/Layouts/SessionLayout';
 import InputError from '@/Components/InputError';
 import PrimaryButton from '@/Components/PrimaryButton';
 import TextInput from '@/Components/TextInput';
@@ -16,12 +16,11 @@ export default function ForgotPassword({ status }) {
     };
 
     return (
-        <GuestLayout>
+        <SessionLayout>
             <Head title="Forgot Password" />
 
             <div className="mb-4 text-sm text-gray-600">
-                Forgot your password? No problem. Just let us know your email address and we will email you a password
-                reset link that will allow you to choose a new one.
+            ¿Olvidaste tu contraseña? No hay problema. Simplemente déjanos saber tu dirección de correo electrónico y te enviaremos un enlace para restablecer tu contraseña, lo que te permitirá elegir una nueva.
             </div>
 
             {status && <div className="mb-4 font-medium text-sm text-green-600">{status}</div>}
@@ -41,10 +40,10 @@ export default function ForgotPassword({ status }) {
 
                 <div className="flex items-center justify-end mt-4">
                     <PrimaryButton className="ms-4" disabled={processing}>
-                        Email Password Reset Link
+                    Enviar Enlace para Restablecer Contraseña por Correo Electrónico
                     </PrimaryButton>
                 </div>
             </form>
-        </GuestLayout>
+        </SessionLayout>
     );
 }
